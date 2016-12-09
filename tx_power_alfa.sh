@@ -14,7 +14,7 @@ i=0
 ifaces=()
 for opc in `ip -o link show | awk -F': ' '{print $2}' | grep -Fvx -e lo`; do
 	ifaces[$i]="$opc"
-		((i++))
+	((i++))
 done
 
 i=1
